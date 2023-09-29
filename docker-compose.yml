@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  forge-server:
+    container_name: forge-server
+    build:
+      context: .
+      args:
+        - JAVA_VERSION=17
+    volumes:
+      - ./minecraft-server:/home/minecraft-server/server
+      - ./entrypoint.sh:/home/minecraft-server/entrypoint.sh
+    environment:
+      - MAX_RAM=8G
+      - FORGE=1
