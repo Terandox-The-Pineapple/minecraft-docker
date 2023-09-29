@@ -14,6 +14,8 @@ if [[ -z $FORGE ]] ; then echo Forge-Mode disabled ; else {
     } fi
 } fi
 
+if [[ -z $FABRIC ]] ; then echo Fabric-Mode disabled ; else echo Starting Fabric ; fi
+
 echo Starting server
 
 if [[ -z $FORGE && -z $FABRIC ]] ; then {
