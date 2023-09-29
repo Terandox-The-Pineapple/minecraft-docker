@@ -9,7 +9,7 @@ if [[ -z $FORGE ]] ; then echo Forge-Mode disabled ; else {
         FORGE_JAR=forge-*-installer.jar
         java -jar ${FORGE_JAR} --installServer
         rm ${FORGE_JAR}
-        if test -f "$SERVER_PATH/user_jvm_args.txt" ; then echo "-Xmx$MAX_RAM" >> user_jvm_args.txt ; fi
+        if test -f "$SERVER_PATH/user_jvm_args.txt" ; then echo -e "\n-Xmx$MAX_RAM" >> user_jvm_args.txt ; fi
         touch .forge-done
     } fi
 } fi
