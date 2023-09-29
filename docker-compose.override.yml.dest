@@ -7,3 +7,5 @@ services:
       - MAX_RAM=8G
 #      - FORGE=1
 #      - FABRIC=1
+    ports:
+      - 25565:25565
