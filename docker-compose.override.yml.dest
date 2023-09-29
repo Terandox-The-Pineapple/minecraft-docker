@@ -1,0 +1,8 @@
+services:
+  forge-server:
+    build:
+      args:
+        - JAVA_VERSION=17
+    environment:
+      - MAX_RAM=8G
+      - FORGE=1
