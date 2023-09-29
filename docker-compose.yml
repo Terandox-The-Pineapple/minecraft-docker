@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  forge-server:
+  minecraft-server:
     container_name: forge-server
     build:
       context: .

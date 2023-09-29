@@ -1,5 +1,5 @@
 services:
-  forge-server:
+  minecraft-server:
     build:
       args:
         - JAVA_VERSION=17
