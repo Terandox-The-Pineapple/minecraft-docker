@@ -5,4 +5,5 @@ services:
         - JAVA_VERSION=17
     environment:
       - MAX_RAM=8G
-      - FORGE=1
+#      - FORGE=1
+#      - FABRIC=1
