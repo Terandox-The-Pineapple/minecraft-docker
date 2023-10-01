@@ -2,9 +2,11 @@ version: '3.8'
 
 services:
   minecraft-server:
-    container_name: forge-server
+    container_name: minecraft-server
     build:
       context: .
     volumes:
       - ./minecraft-server:/home/minecraft-server/server
       - ./entrypoint.sh:/home/minecraft-server/entrypoint.sh
+    ports:
+      - 25575:25575
