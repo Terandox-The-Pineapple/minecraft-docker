@@ -17,9 +17,11 @@ if [[ -z $FORGE ]] ; then echo Forge-Mode disabled ; else {
 if [[ -z $FABRIC ]] ; then echo Fabric-Mode disabled ; else echo Starting Fabric ; fi
 
 if ! test -f .rcon.lock ; then {
-    sed -i 's/enable-rcon=false/enable-rcon=true/' $SERVER_PATH/server.properties
-    sed -i 's/rcon.password=/rcon.password=Uwu666@13-Ara_Ara/' $SERVER_PATH/server.properties
-    touch .rcon.lock
+    if test -f server.properties; then {
+        sed -i 's/enable-rcon=false/enable-rcon=true/' $SERVER_PATH/server.properties
+        sed -i 's/rcon.password=/rcon.password=Uwu666@13-Ara_Ara/' $SERVER_PATH/server.properties
+        touch .rcon.lock
+    } fi
 } fi
 
 echo Starting server
